@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+
+double a, c, d;
+char b, h;
+void kalkulator()
+{
+    cout << "ini adalah aplkasi perhitungan y/n : ";
+    cin >> h;
+}
+void input()
+{
+    cout << "masukkan nilai a: ";
+    cin >> a;
+    cout
+        << "masukkan operator +,-,x,/,: ";
+    cin >> b;
+    cout
+        << "masukkan nilai c: ";
+    cin >> c;
+}
+void hitung()
+{
+    if (b == '+')
+    {
+        d = a + c;
+    }
+    else if (b == '-')
+    {
+        d = a - c;
+    }
+    else if (b == 'x')
+    {
+        d = a * c;
+    }
+    else if (b == '/')
+    {
+        d = a / c;
+    }
+}
+void printft()
+{
+    cout << "hasilnya adalah : " << d << endl;
+}
+
+int main()
+{
+    while (true)
+    {
+        kalkulator();
+        if (h == 'y')
+        {
+            input();
+            hitung();
+            printft();
+        }
+        else if (h == 'n')
+        {
+            break;
+        }
+        else if (h != 'y','n')
+        {
+          cout << "silahkan pilih y/n" << endl;
+          kalkulator();
+        }
+    }
+    return 0;
+}
