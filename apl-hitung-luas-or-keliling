@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+
+double a, b, c;
+char i, j;
+void limiter(){
+  cout << "\n\nAPLIKASI HITUNG BANGUN 3D\n\n";
+  cout << "apakah ingin lanjut y/n : ";
+  cin >> j;
+}
+void system()
+{
+    cout << "silahkan pilih keliling(K), luas(L) : ";
+    cin >> i;
+}
+void luas()
+{
+    a = b * c;
+  cout << "hasilnya adalah : " << a << endl;
+}
+void keliling()
+{
+    a = 2*(b + c);
+   cout << "hasilnya adalah : " << a << endl;
+}
+void input()
+{
+    cout << "masukkan nilai b: ";
+    cin >> b;
+    cout << "masukkan nilai c: ";
+    cin >> c;
+}
+
+int main()
+{
+    while (true)
+    {
+      limiter();
+      if(j == 'y'){
+              system();
+        if (i == 'K'||'k')
+        {
+            input();
+            keliling();
+        }
+        else if (i == 'L'||'l'){
+            input();
+            luas();
+        }
+        else if (i == 'K'||'k'){
+             cout << "pilihan yang anda masukkan salah" << endl;
+        }
+        else if (1 != 'L'||'l'){
+             cout << "pilihan yang anda masukkan salah" << endl;
+        }
+      } else if (j == 'n'){
+        break;
+        
+      }else if (j!='y'||'n'){
+        cout << "tidak valid" << endl;
+        limiter();
+      }
+    }
+
+    return 0;
+}
